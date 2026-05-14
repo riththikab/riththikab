@@ -10,22 +10,26 @@
 <tr>
 <td width="55%" valign="top">
 
-### `> whoami`
+### 🧬 `init Riththika()`
 
-```python
-{
-  "name"      : "Riththika",
-  "role"      : "CS Engineering Student",
-  "focus"     : ["AI", "ML", "Data Science"],
-  "building"  : "real-world solutions",
-  "motto"     : "Learning → Growing → Impact 🚀"
-}
+```javascript
+const riththika = {
+  🎓 education : "Computer Science Engineering",
+  🤖 passion   : ["AI", "ML", "Data Science"],
+  🔨 building  : "real-world intelligent systems",
+  🌱 currently : "Sharpening ML skills for hackathons",
+  💡 motto     : "Learning → Growing → Impact 🚀"
+};
 ```
 
-<img src="https://img.shields.io/badge/📍_India-0d1117?style=flat-square&labelColor=7c6fff&color=1a1a2e"/>
-<img src="https://img.shields.io/badge/💌_rithikab1908@gmail.com-0d1117?style=flat-square&labelColor=4f46e5&color=1a1a2e"/>
-<img src="https://img.shields.io/badge/🤝_Open_to_AI_&_ML_Collab-0d1117?style=flat-square&labelColor=7c3aed&color=1a1a2e"/>
-<img src="https://img.shields.io/badge/🥷_Vigilante_(SECRET)-0d1117?style=flat-square&labelColor=991b1b&color=1a1a2e"/>
+<br/>
+
+![](https://img.shields.io/badge/📍%20India-1a1a2e?style=for-the-badge&labelColor=7c6fff)
+![](https://img.shields.io/badge/💌%20rithikab1908%40gmail.com-1a1a2e?style=for-the-badge&labelColor=4f46e5)
+
+<br/>
+
+![](https://img.shields.io/badge/🤝%20Open%20to%20AI%20%26%20ML%20Collaboration-1a1a2e?style=for-the-badge&labelColor=059669)
 
 </td>
 <td width="45%" valign="top" align="center">
