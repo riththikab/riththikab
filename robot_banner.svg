@@ -1,0 +1,308 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 280" width="900" height="280">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#0a0a1a"/>
+      <stop offset="50%" style="stop-color:#0d0d2b"/>
+      <stop offset="100%" style="stop-color:#0a0a1a"/>
+    </linearGradient>
+    <linearGradient id="bodyG" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#4f46e5"/>
+      <stop offset="100%" style="stop-color:#7c3aed"/>
+    </linearGradient>
+    <linearGradient id="headG" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#6d28d9"/>
+      <stop offset="100%" style="stop-color:#4338ca"/>
+    </linearGradient>
+    <linearGradient id="screenG" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#0f0c29"/>
+      <stop offset="100%" style="stop-color:#1a1040"/>
+    </linearGradient>
+    <linearGradient id="eyeG" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#a78bfa"/>
+      <stop offset="100%" style="stop-color:#60a5fa"/>
+    </linearGradient>
+    <linearGradient id="nameG" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:#c4b5fd"/>
+      <stop offset="40%" style="stop-color:#a78bfa"/>
+      <stop offset="80%" style="stop-color:#818cf8"/>
+      <stop offset="100%" style="stop-color:#60a5fa"/>
+    </linearGradient>
+    <filter id="glow">
+      <feGaussianBlur stdDeviation="3" result="blur"/>
+      <feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+    <filter id="softglow">
+      <feGaussianBlur stdDeviation="6" result="blur"/>
+      <feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+    <radialGradient id="auraG" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" style="stop-color:#7c3aed;stop-opacity:0.3"/>
+      <stop offset="100%" style="stop-color:#7c3aed;stop-opacity:0"/>
+    </radialGradient>
+    <radialGradient id="shadowG" cx="50%" cy="30%" r="70%">
+      <stop offset="0%" style="stop-color:#4f46e5;stop-opacity:0.15"/>
+      <stop offset="100%" style="stop-color:#4f46e5;stop-opacity:0"/>
+    </radialGradient>
+
+    <!-- star shape -->
+    <style>
+      .float { animation: float 3.5s ease-in-out infinite; }
+      .blink-eye { animation: blinkEye 4s ease-in-out infinite; }
+      .wave-arm { animation: waveArm 2s ease-in-out infinite; transform-origin: 193px 148px; }
+      .pulse-ant { animation: pulseAnt 1.4s ease-in-out infinite; }
+      .scan-line { animation: scanLine 2.5s linear infinite; }
+      .data1 { animation: dataBar 2s ease-in-out infinite; }
+      .data2 { animation: dataBar 2.5s ease-in-out infinite 0.4s; }
+      .data3 { animation: dataBar 1.8s ease-in-out infinite 0.8s; }
+      .orbit { animation: orbit 6s linear infinite; transform-origin: 130px 155px; }
+      .orbit2 { animation: orbit 9s linear infinite reverse; transform-origin: 130px 155px; }
+      .star1 { animation: twinkle 2s ease-in-out infinite; }
+      .star2 { animation: twinkle 3s ease-in-out infinite 0.7s; }
+      .star3 { animation: twinkle 2.5s ease-in-out infinite 1.2s; }
+      .star4 { animation: twinkle 1.8s ease-in-out infinite 0.3s; }
+      .star5 { animation: twinkle 2.8s ease-in-out infinite 1.5s; }
+      .typetext { animation: typing 4s steps(20) infinite; }
+      .cursor { animation: blink 0.8s step-end infinite; }
+      .pulse-heart { animation: heartbeat 0.9s ease-in-out infinite; transform-origin: 151px 173px; }
+      .aura { animation: auraPulse 3.5s ease-in-out infinite; }
+
+      @keyframes float {
+        0%,100% { transform: translateY(0px); }
+        50% { transform: translateY(-10px); }
+      }
+      @keyframes blinkEye {
+        0%,90%,100% { transform: scaleY(1); }
+        95% { transform: scaleY(0.08); }
+      }
+      @keyframes waveArm {
+        0%,100% { transform: rotate(0deg); }
+        25% { transform: rotate(-12deg); }
+        75% { transform: rotate(8deg); }
+      }
+      @keyframes pulseAnt {
+        0%,100% { opacity:1; r:5; }
+        50% { opacity:0.3; r:7; }
+      }
+      @keyframes scanLine {
+        0% { transform: translateY(0px); opacity:0.8; }
+        100% { transform: translateY(46px); opacity:0; }
+      }
+      @keyframes dataBar {
+        0%,100% { width: 38px; }
+        50% { width: 18px; }
+      }
+      @keyframes orbit {
+        from { transform: rotate(0deg) translateX(22px) rotate(0deg); }
+        to { transform: rotate(360deg) translateX(22px) rotate(-360deg); }
+      }
+      @keyframes twinkle {
+        0%,100% { opacity:0.2; }
+        50% { opacity:1; }
+      }
+      @keyframes typing {
+        0%,100% { clip-path: inset(0 100% 0 0); }
+        20%,80% { clip-path: inset(0 0% 0 0); }
+      }
+      @keyframes blink {
+        0%,100% { opacity:1; }
+        50% { opacity:0; }
+      }
+      @keyframes heartbeat {
+        0%,100% { transform: scale(1); }
+        14% { transform: scale(1.2); }
+        28% { transform: scale(1); }
+        42% { transform: scale(1.15); }
+        56% { transform: scale(1); }
+      }
+      @keyframes auraPulse {
+        0%,100% { opacity:0.4; transform: scale(1); }
+        50% { opacity:0.8; transform: scale(1.08); }
+      }
+    </style>
+  </defs>
+
+  <!-- BACKGROUND -->
+  <rect width="900" height="280" fill="url(#bg)"/>
+  <rect width="900" height="280" fill="url(#shadowG)"/>
+
+  <!-- Stars scattered -->
+  <circle class="star1" cx="30" cy="20" r="1.2" fill="#a78bfa"/>
+  <circle class="star2" cx="80" cy="50" r="0.8" fill="#60a5fa"/>
+  <circle class="star3" cx="55" cy="100" r="1" fill="#c4b5fd"/>
+  <circle class="star4" cx="810" cy="30" r="1.2" fill="#a78bfa"/>
+  <circle class="star5" cx="860" cy="80" r="0.8" fill="#818cf8"/>
+  <circle class="star1" cx="840" cy="150" r="1" fill="#c4b5fd"/>
+  <circle class="star2" cx="20" cy="200" r="1" fill="#60a5fa"/>
+  <circle class="star3" cx="880" cy="220" r="1.2" fill="#a78bfa"/>
+  <circle class="star4" cx="760" cy="60" r="0.8" fill="#818cf8"/>
+  <circle class="star5" cx="40" cy="140" r="0.9" fill="#c4b5fd"/>
+  <circle class="star1" cx="700" cy="240" r="1" fill="#60a5fa"/>
+  <circle class="star2" cx="120" cy="250" r="0.8" fill="#a78bfa"/>
+
+  <!-- Grid lines subtle -->
+  <line x1="0" y1="70" x2="900" y2="70" stroke="#4f46e5" stroke-width="0.3" stroke-opacity="0.2"/>
+  <line x1="0" y1="140" x2="900" y2="140" stroke="#4f46e5" stroke-width="0.3" stroke-opacity="0.2"/>
+  <line x1="0" y1="210" x2="900" y2="210" stroke="#4f46e5" stroke-width="0.3" stroke-opacity="0.2"/>
+  <line x1="220" y1="0" x2="220" y2="280" stroke="#4f46e5" stroke-width="0.3" stroke-opacity="0.15"/>
+  <line x1="680" y1="0" x2="680" y2="280" stroke="#4f46e5" stroke-width="0.3" stroke-opacity="0.15"/>
+
+  <!-- ROBOT GROUP — floats -->
+  <g class="float">
+
+    <!-- AURA behind robot -->
+    <ellipse class="aura" cx="130" cy="168" rx="72" ry="75" fill="url(#auraG)"/>
+
+    <!-- ORBIT rings -->
+    <ellipse cx="130" cy="155" rx="60" ry="18" fill="none" stroke="#4f46e5" stroke-width="0.6" stroke-opacity="0.4"/>
+    <ellipse cx="130" cy="155" rx="75" ry="24" fill="none" stroke="#7c3aed" stroke-width="0.5" stroke-opacity="0.25"/>
+
+    <!-- Orbiting dot 1 -->
+    <g class="orbit">
+      <circle cx="130" cy="133" r="3.5" fill="#a78bfa" filter="url(#glow)"/>
+    </g>
+    <!-- Orbiting dot 2 -->
+    <g class="orbit2">
+      <circle cx="130" cy="131" r="2.5" fill="#60a5fa" filter="url(#glow)"/>
+    </g>
+
+    <!-- SHADOW under robot -->
+    <ellipse cx="130" cy="248" rx="44" ry="8" fill="#4f46e5" fill-opacity="0.2"/>
+
+    <!-- LEFT ARM -->
+    <rect x="58" y="145" width="20" height="52" rx="10" fill="#4338ca"/>
+    <rect x="61" y="148" width="14" height="46" rx="8" fill="#4f46e5" fill-opacity="0.4"/>
+    <rect x="52" y="192" width="28" height="14" rx="7" fill="#3730a3"/>
+
+    <!-- RIGHT ARM (waves) -->
+    <g class="wave-arm">
+      <rect x="162" y="145" width="20" height="52" rx="10" fill="#4338ca"/>
+      <rect x="165" y="148" width="14" height="46" rx="8" fill="#4f46e5" fill-opacity="0.4"/>
+      <rect x="160" y="192" width="28" height="14" rx="7" fill="#3730a3"/>
+    </g>
+
+    <!-- BODY -->
+    <rect x="72" y="138" width="116" height="80" rx="14" fill="url(#bodyG)"/>
+    <rect x="75" y="141" width="110" height="74" rx="12" fill="white" fill-opacity="0.05"/>
+
+    <!-- SHOULDER bolts -->
+    <circle cx="78" cy="148" r="7" fill="#6d28d9"/>
+    <circle cx="78" cy="148" r="4" fill="#a78bfa" opacity="0.5"/>
+    <circle cx="182" cy="148" r="7" fill="#6d28d9"/>
+    <circle cx="182" cy="148" r="4" fill="#a78bfa" opacity="0.5"/>
+
+    <!-- CHEST PANEL -->
+    <rect x="90" y="150" width="80" height="54" rx="8" fill="#0f0c29" fill-opacity="0.7"/>
+    <rect x="91" y="151" width="78" height="52" rx="7" fill="none" stroke="#4f46e5" stroke-width="0.7"/>
+
+    <!-- Data bars on chest -->
+    <rect class="data1" x="98" y="160" height="4" rx="2" fill="#a78bfa" fill-opacity="0.7" width="38"/>
+    <rect class="data2" x="98" y="168" height="4" rx="2" fill="#60a5fa" fill-opacity="0.6" width="38"/>
+    <rect class="data3" x="98" y="176" height="4" rx="2" fill="#34d399" fill-opacity="0.5" width="38"/>
+
+    <!-- Heart icon -->
+    <g class="pulse-heart">
+      <path d="M151 168 C151 165 148 162 145 164 C142 162 139 165 139 168 C139 172 145 176 151 176 C157 176 163 172 163 168 C163 165 160 162 157 164 C154 162 151 165 151 168Z" fill="#ef4444" opacity="0.7"/>
+    </g>
+
+    <!-- NECK -->
+    <rect x="116" y="126" width="28" height="14" rx="6" fill="#4338ca"/>
+    <rect x="120" y="128" width="20" height="10" rx="4" fill="white" fill-opacity="0.08"/>
+
+    <!-- HEAD -->
+    <rect x="78" y="62" width="104" height="66" rx="14" fill="url(#headG)"/>
+    <rect x="81" y="65" width="98" height="60" rx="12" fill="white" fill-opacity="0.05"/>
+
+    <!-- EAR bolts -->
+    <rect x="64" y="82" width="16" height="26" rx="8" fill="#4338ca"/>
+    <rect x="67" y="87" width="10" height="16" rx="5" fill="#6d28d9"/>
+    <rect x="180" y="82" width="16" height="26" rx="8" fill="#4338ca"/>
+    <rect x="183" y="87" width="10" height="16" rx="5" fill="#6d28d9"/>
+
+    <!-- ANTENNA -->
+    <rect x="128" y="44" width="4" height="20" rx="2" fill="#6d28d9"/>
+    <circle cx="130" cy="40" r="7" fill="#1a1040" stroke="#7c3aed" stroke-width="1.5"/>
+    <circle class="pulse-ant" cx="130" cy="40" r="5" fill="#a78bfa" filter="url(#glow)"/>
+
+    <!-- SCREEN FACE -->
+    <rect x="88" y="72" width="84" height="48" rx="8" fill="url(#screenG)"/>
+    <rect x="89" y="73" width="82" height="46" rx="7" fill="none" stroke="#4338ca" stroke-width="0.8"/>
+
+    <!-- Scan line on screen -->
+    <rect class="scan-line" x="89" y="73" width="82" height="3" rx="1" fill="#a78bfa" opacity="0.15"/>
+
+    <!-- LEFT EYE -->
+    <g class="blink-eye" style="transform-origin: 109px 93px;">
+      <ellipse cx="109" cy="93" rx="13" ry="13" fill="#0f0c29"/>
+      <ellipse cx="109" cy="93" rx="10" ry="10" fill="url(#eyeG)" filter="url(#glow)"/>
+      <circle cx="109" cy="93" r="4" fill="#0f0c29"/>
+      <circle cx="106" cy="90" r="2.5" fill="white" opacity="0.7"/>
+    </g>
+
+    <!-- RIGHT EYE -->
+    <g class="blink-eye" style="transform-origin: 151px 93px;">
+      <ellipse cx="151" cy="93" rx="13" ry="13" fill="#0f0c29"/>
+      <ellipse cx="151" cy="93" rx="10" ry="10" fill="url(#eyeG)" filter="url(#glow)"/>
+      <circle cx="151" cy="93" r="4" fill="#0f0c29"/>
+      <circle cx="148" cy="90" r="2.5" fill="white" opacity="0.7"/>
+    </g>
+
+    <!-- MOUTH bar -->
+    <rect x="104" y="109" width="52" height="6" rx="3" fill="#0f0c29"/>
+    <rect x="106" y="110" width="48" height="4" rx="2" fill="#a78bfa" opacity="0.5">
+      <animate attributeName="width" values="48;22;48" dur="2.5s" repeatCount="indefinite"/>
+      <animate attributeName="x" values="106;118;106" dur="2.5s" repeatCount="indefinite"/>
+    </rect>
+
+    <!-- LEGS -->
+    <rect x="90" y="214" width="34" height="38" rx="12" fill="#3730a3"/>
+    <rect x="93" y="217" width="28" height="32" rx="9" fill="white" fill-opacity="0.06"/>
+    <rect x="85" y="245" width="44" height="14" rx="7" fill="#312e81"/>
+
+    <rect x="136" y="214" width="34" height="38" rx="12" fill="#3730a3"/>
+    <rect x="139" y="217" width="28" height="32" rx="9" fill="white" fill-opacity="0.06"/>
+    <rect x="131" y="245" width="44" height="14" rx="7" fill="#312e81"/>
+
+  </g><!-- end float group -->
+
+  <!-- DIVIDER LINE -->
+  <line x1="250" y1="40" x2="250" y2="240" stroke="#4f46e5" stroke-width="0.6" stroke-opacity="0.4"/>
+
+  <!-- RIGHT SIDE: TEXT CONTENT -->
+
+  <!-- NAME -->
+  <text x="290" y="108" font-family="'Segoe UI',Arial,sans-serif" font-size="62" font-weight="900" fill="url(#nameG)" filter="url(#softglow)" letter-spacing="4">RITHTHIKA</text>
+
+  <!-- Subtitle -->
+  <text x="293" y="135" font-family="'Segoe UI',Arial,sans-serif" font-size="16" fill="#8888bb" letter-spacing="3">AI  •  PYTHON  •  DATA SCIENCE</text>
+
+  <!-- Typing text area -->
+  <rect x="290" y="150" width="580" height="28" rx="5" fill="#0f0c29" fill-opacity="0.6"/>
+  <rect x="291" y="151" width="578" height="26" rx="4" fill="none" stroke="#4f46e5" stroke-width="0.5" stroke-opacity="0.5"/>
+  <text x="300" y="168" font-family="'Courier New',monospace" font-size="12" fill="#34d399">
+    <tspan>&gt; </tspan><tspan fill="#a78bfa">CS Engineering Student</tspan><tspan fill="#555588"> | </tspan><tspan fill="#60a5fa">ML &amp; AI Builder</tspan><tspan class="cursor" fill="#a78bfa">_</tspan>
+  </text>
+
+  <!-- Badges row -->
+  <!-- India -->
+  <rect x="290" y="192" width="68" height="22" rx="11" fill="#7c3aed" fill-opacity="0.2"/>
+  <rect x="290" y="192" width="68" height="22" rx="11" fill="none" stroke="#7c3aed" stroke-width="0.8"/>
+  <text x="304" y="207" font-family="'Segoe UI',Arial,sans-serif" font-size="11" fill="#c4b5fd">📍 India</text>
+
+  <!-- Open to collab -->
+  <rect x="366" y="192" width="130" height="22" rx="11" fill="#059669" fill-opacity="0.15"/>
+  <rect x="366" y="192" width="130" height="22" rx="11" fill="none" stroke="#059669" stroke-width="0.8"/>
+  <text x="378" y="207" font-family="'Segoe UI',Arial,sans-serif" font-size="11" fill="#34d399">🤝 Open to AI &amp; ML Collab</text>
+
+  <!-- Secret -->
+  <rect x="504" y="192" width="118" height="22" rx="11" fill="#991b1b" fill-opacity="0.15"/>
+  <rect x="504" y="192" width="118" height="22" rx="11" fill="none" stroke="#991b1b" stroke-width="0.8"/>
+  <text x="516" y="207" font-family="'Segoe UI',Arial,sans-serif" font-size="11" fill="#f87171">🥷 Vigilante (SECRET)</text>
+
+  <!-- Tagline bottom -->
+  <text x="290" y="242" font-family="'Segoe UI',Arial,sans-serif" font-size="13" fill="#555588" font-style="italic" letter-spacing="1">Learning  →  Growing  →  Chasing Impact  🚀</text>
+
+  <!-- Corner decoration top-right -->
+  <polygon points="870,0 900,0 900,30" fill="#4f46e5" fill-opacity="0.3"/>
+  <polygon points="0,250 0,280 30,280" fill="#7c3aed" fill-opacity="0.2"/>
+
+</svg>
